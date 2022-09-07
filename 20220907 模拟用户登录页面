@@ -1,0 +1,23 @@
+//（只允许输入三次密码，如果密码正确则提示登陆成功，如果三次均输入错误，则退出程序）
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int main()
+{
+	int a;
+	printf("欢迎登陆\n");
+	for (int i = 1; i >= 1 && i <= 3; i++)
+	{
+		scanf("%d", &a);
+		if (a == 123)
+		{
+			printf("密码正确");
+			break;
+		}
+		else
+		{
+			printf("密码错误");
+		}
+	}
+
+		return 0;
+}
