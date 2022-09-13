@@ -2,6 +2,7 @@
 //welcome to china!!!
 #include<stdio.h>
 #include<string.h>
+#include<windows.h>
 int main()
 {
 	char arr1[] = "welcome to china!!!";
@@ -18,6 +19,7 @@ int main()
 		printf(" % s\n", arr2);
 		left++;
 		right--;
+		Sleep(1000);  //停顿1秒（1000毫秒）
 	
 		if (left > right)
 		{
