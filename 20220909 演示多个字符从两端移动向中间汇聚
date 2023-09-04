@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 //welcome to china!!!
+
 #include<stdio.h>
 #include<string.h>
 #include<windows.h>
@@ -7,26 +8,21 @@ int main()
 {
 	char arr1[] = "welcome to china!!!";
 	char arr2[] = "###################";
-	printf("%d\n%d\n", strlen(arr1), strlen(arr2));
+	printf("%d %d\n", strlen(arr1), strlen(arr2));
 	printf(" % s\n", arr2);
 	int left = 0;
 	int right = strlen(arr1) - 1;
 	while (left <= right)
 	{
-		
+
 		arr2[left] = arr1[left];
 		arr2[right] = arr1[right];
 		printf(" % s\n", arr2);
 		left++;
 		right--;
-		Sleep(1000);  //停顿1秒（1000毫秒）
-	
-		if (left > right)
-		{
-			break;
-		}
-	
+		Sleep(1000);  //停顿1秒（1000毫秒）  Sleep的S必须要大写，它是引用的  windows.h 这个库
+		system("cls"); // system的s必须小写，它是引用的  stdlib.h 这个库
 	}
-	
+
 	return 0;
 }
