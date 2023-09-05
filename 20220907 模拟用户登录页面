@@ -1,4 +1,5 @@
 //（只允许输入三次密码，如果密码正确则提示登陆成功，如果三次均输入错误，则退出程序）
+①2022年版--初学
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 int main()
@@ -21,3 +22,43 @@ int main()
 
 		return 0;
 }
+
+②2023年半--学习一年半
+#define  _CRT_SECURE_NO_WARNINGS 1
+//设置一个用户登录程序，只能登录三次，密码输入正确则登录成功，若输入三次密码均显示密码错误则用户登录失败
+
+#include<stdio.h>
+#include<windows.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+	char arr[] = "123456";
+	printf("欢迎登录界面\n");
+	Sleep(1000);
+	system("cls");             //这里必须加Sleep(1000);不然欢迎登录界面直接消失，不是停顿1s后在消失
+
+	char arr2[20] = { 0 };      //创建以0为元素的数组时要给定数组的元素个数，不然数组的元素个数默认为1
+
+	for (int a = 0; a < 3; a++)
+	{
+		printf("请输入密码 》");
+		scanf("%s", arr2);
+		
+		if ((strcmp(arr , arr2))==0)
+		{
+			printf("密码输入正确\n");
+			break;
+		}
+		else
+		{
+			printf("密码输入错误\n");
+	
+		}
+
+
+	}
+
+	return 0;
+}
+
