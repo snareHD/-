@@ -1,0 +1,42 @@
+//冒泡排序
+
+#include<stdio.h>
+
+void change(int arr[],int sz)
+{
+	int i = 0;
+	for (int x= 0; x < sz-1; x++)
+	{
+		int j = 1;                       //判断该数组是否有序的依据
+		for (i = 0; i < sz-1-x; i++)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				int b = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = b;
+				j = 0;                   //若j被赋值为0说明该数据不完全有序
+			}
+
+		}
+		if (j == 1)
+		{
+			break;
+		}
+
+	}
+}
+
+
+int main()
+{
+
+	int arr[] = { 10,9,8,7,6,5,4,3,2,1 };
+	int sz = sizeof(arr) / sizeof(arr[0]);  //10
+	 change(arr,sz);
+	 for (int a = 0; a < 10; a++)
+	 {
+		 printf("%d ", arr[a]);
+	 }
+	return 0;
+}
