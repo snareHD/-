@@ -15,7 +15,7 @@ void change(int arr[],int sz)
 				int b = arr[i];
 				arr[i] = arr[i + 1];
 				arr[i + 1] = b;
-				j = 0;                   //若j被赋值为0说明该数据不完全有序
+				j = 0;                   //若j被赋值为0说明该数组不完全有序
 			}
 
 		}
